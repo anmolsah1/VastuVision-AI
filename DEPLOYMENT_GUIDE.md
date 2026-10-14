@@ -1,4 +1,4 @@
-# VastuVision AI — 24/7 Free Cloud Hosting Guide
+# Archie AI — 24/7 Free Cloud Hosting Guide
 Deploy **Backend to Render.com** and **Frontend to Vercel** (both 100% free forever).
 
 ---

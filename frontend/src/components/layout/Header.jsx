@@ -2,7 +2,7 @@ import { useLocation } from 'react-router-dom'
 import { useDesignContext } from '../../context/DesignContext'
 
 const PAGE_TITLES = {
-  '/': 'Welcome to VastuVision AI',
+  '/': 'Welcome to Archie AI',
   '/new': 'Design Studio',
   '/history': 'Design History',
 }
@@ -12,7 +12,7 @@ export const Header = () => {
   const { isMockData, mockModeEnabled } = useDesignContext()
 
   const isDesignPage = location.pathname.startsWith('/design/')
-  const title = isDesignPage ? 'Design Result' : (PAGE_TITLES[location.pathname] || 'VastuVision AI')
+  const title = isDesignPage ? 'Design Result' : (PAGE_TITLES[location.pathname] || 'Archie AI')
 
   return (
     <header className="h-14 border-b border-white/5 bg-charcoal-900/50 backdrop-blur-sm flex items-center justify-between px-6 flex-shrink-0">

@@ -126,7 +126,7 @@ RENDERING STYLE:
 - Style similar to luxury real estate visualization
 - Each panel labeled with its view name in clean, minimal typography
 - Clean white dividers separating the 6 panels
-- Overall board has a professional layout with "VastuVision AI" watermark in corner
+- Overall board has a professional layout with "Archie AI" watermark in corner
 
 AVOID:
 - Random furniture changes between panels

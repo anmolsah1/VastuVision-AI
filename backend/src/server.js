@@ -1,6 +1,6 @@
 /**
  * @file server.js
- * @description Entry point for the VastuVision AI backend server.
+ * @description Entry point for the Archie AI backend server.
  * Initializes the database connection and starts the HTTP server.
  */
 
@@ -13,7 +13,7 @@ const startServer = async () => {
   // Start the HTTP server immediately so port 5000 is ready without delay
   const server = app.listen(config.port, '0.0.0.0', () => {
     logger.info(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`);
-    logger.info(`🏠  VastuVision AI — Backend Server`);
+    logger.info(`🏠  Archie AI — Backend Server`);
     logger.info(`🚀  Running at: http://localhost:${config.port}`);
     logger.info(`🌍  Environment: ${config.nodeEnv}`);
     logger.info(`🤖  AI Mock Mode: ${config.ai.mockMode ? 'ENABLED (demo mode)' : 'DISABLED (using real AI)'}`);

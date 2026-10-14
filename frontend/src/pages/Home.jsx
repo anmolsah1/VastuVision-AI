@@ -27,7 +27,7 @@ const HowItWorks = () => {
   return (
     <div className="mt-16">
       <div className="text-center mb-10">
-        <h2 className="font-heading text-2xl font-bold text-white mb-3">How VastuVision AI Works</h2>
+        <h2 className="font-heading text-2xl font-bold text-white mb-3">How Archie AI Works</h2>
         <p className="text-white/40 text-sm max-w-lg mx-auto">A transparent look at the AI pipeline powering this application</p>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -75,10 +75,10 @@ export const Home = () => {
         </div>
 
         <h1 className="font-heading text-5xl font-bold text-gradient-hero mb-4 leading-tight">
-          VastuVision AI
+          Archie AI
         </h1>
         <p className="text-xl text-saffron-400 font-medium mb-4">
-          AI-Powered Indian Interior Design & Vastu Planning
+          AI-Powered Architectural Space Planning & Vastu Design
         </p>
         <p className="text-white/50 text-base max-w-xl mx-auto leading-relaxed mb-8">
           Generate stunning 6-view room design concepts powered by AI — with traditional Vastu Shastra principles integrated and clearly explained. Optimized for Mumbai & Navi Mumbai homes.
@@ -160,7 +160,7 @@ export const Home = () => {
       <div className="mt-10 p-5 glass-card text-center">
         <p className="text-sm font-semibold text-white/60 mb-2">🎓 College Project — Academic Use</p>
         <p className="text-xs text-white/30 max-w-xl mx-auto leading-relaxed">
-          VastuVision AI is an academic project demonstrating AI integration with cultural knowledge systems.
+          Archie AI is an academic project demonstrating AI integration with cultural knowledge systems.
           Vastu Shastra recommendations are presented as traditional cultural beliefs, not scientific facts.
           All practical design recommendations are based on standard architectural principles.
         </p>

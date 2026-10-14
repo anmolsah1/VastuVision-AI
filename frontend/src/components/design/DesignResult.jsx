@@ -108,7 +108,7 @@ export const DesignResult = ({
   const handleDownloadAllViews = async () => {
     for (let i = 0; i < displayViews.length; i++) {
       const v = displayViews[i]
-      await downloadImage(v.url, `vastuvision-${v.id}-${Date.now()}.png`)
+      await downloadImage(v.url, `archieai-${v.id}-${Date.now()}.png`)
       await new Promise((r) => setTimeout(r, 400))
     }
   }
@@ -174,7 +174,7 @@ export const DesignResult = ({
 
             <button
               id="download-all-btn"
-              onClick={() => downloadImage(compositeUrl, `vastuvision-6views-${Date.now()}.png`)}
+              onClick={() => downloadImage(compositeUrl, `archieai-6views-${Date.now()}.png`)}
               className="btn-secondary py-1.5 px-3 text-xs flex items-center gap-1.5 hover:border-saffron-500/40"
               title="Download Full 6-View Sheet"
             >
@@ -267,7 +267,7 @@ export const DesignResult = ({
               <div className="absolute bottom-14 right-0 w-60 rounded-xl bg-charcoal-900/95 backdrop-blur-xl border border-white/15 p-2 shadow-2xl z-30 space-y-1 animate-fade-in">
                 <button
                   onClick={() => {
-                    downloadImage(compositeUrl, `vastuvision-6views-${Date.now()}.png`)
+                    downloadImage(compositeUrl, `archieai-6views-${Date.now()}.png`)
                     setShowShareMenu(false)
                   }}
                   className="w-full text-left px-3 py-2 rounded-lg text-xs font-medium text-white/80 hover:text-white hover:bg-white/10 flex items-center gap-2.5 transition-colors"
@@ -345,7 +345,7 @@ export const DesignResult = ({
                   onClick={() =>
                     downloadImage(
                       displayViews[selectedViewIndex].url,
-                      `vastuvision-${displayViews[selectedViewIndex].id}.png`
+                      `archieai-${displayViews[selectedViewIndex].id}.png`
                     )
                   }
                   className="btn-secondary py-1.5 px-3 text-xs flex items-center gap-1"

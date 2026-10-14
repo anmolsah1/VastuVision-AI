@@ -218,7 +218,7 @@ const runImageGeneration = async (designSpec, onProgress = () => {}) => {
  * @returns {Promise<{ designSpec: Object, imageUrl: string }>}
  */
 const runFullPipeline = async (inputParams, onProgress = () => {}) => {
-  logger.ai('Starting full VastuVision AI pipeline...');
+  logger.ai('Starting full Archie AI pipeline...');
   const startTime = Date.now();
 
   onProgress({ stage: 'start', message: 'Starting AI analysis...', percent: 0 });

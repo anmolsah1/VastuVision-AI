@@ -1,6 +1,6 @@
 /**
  * @file Design.js
- * @description Mongoose model for a VastuVision design.
+ * @description Mongoose model for an Archie AI design.
  * Stores the full design lifecycle from user input → AI analysis → generated image.
  */
 const mongoose = require('mongoose');

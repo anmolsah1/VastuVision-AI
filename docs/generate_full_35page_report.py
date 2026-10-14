@@ -1,7 +1,7 @@
 """
 generate_full_35page_report.py
 Generates an authentic, highly detailed, 38-42 page academic capstone project report for:
-"VASTUVISION AI: AUTONOMOUS ARCHITECTURAL SPACE PLANNING & 3D INTERIOR VISUALIZATION USING DUAL-AI ORCHESTRATION"
+"ARCHIE AI: AUTONOMOUS ARCHITECTURAL SPACE PLANNING & 3D INTERIOR VISUALIZATION USING DUAL-AI ORCHESTRATION"
 Department of Computer Science & Artificial Intelligence, RJ College (Autonomous), Mumbai University.
 """
 
@@ -45,7 +45,7 @@ def build_35_page_document():
         footer = section.footer
         fp = footer.paragraphs[0]
         fp.alignment = WD_ALIGN_PARAGRAPH.RIGHT
-        frun = fp.add_run("VastuVision AI: Autonomous Spatial & Directional Architecture  |  Department of CS & AI")
+        frun = fp.add_run("Archie AI: Autonomous Spatial & Directional Architecture  |  Department of CS & AI")
         frun.font.name = "Times New Roman"
         frun.font.size = Pt(9)
         frun.font.color.rgb = RGBColor(128, 128, 128)
@@ -191,7 +191,7 @@ def build_35_page_document():
     p_title = doc.add_paragraph()
     p_title.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p_title.paragraph_format.space_after = Pt(8)
-    r_title = p_title.add_run("VASTUVISION AI:\nAUTONOMOUS ARCHITECTURAL SPACE PLANNING & 3D INTERIOR VISUALIZATION USING DUAL-AI ORCHESTRATION")
+    r_title = p_title.add_run("ARCHIE AI:\nAUTONOMOUS ARCHITECTURAL SPACE PLANNING & 3D INTERIOR VISUALIZATION USING DUAL-AI ORCHESTRATION")
     r_title.font.name = "Times New Roman"
     r_title.font.size = Pt(17)
     r_title.font.bold = True
@@ -260,7 +260,7 @@ def build_35_page_document():
     r_cert.font.color.rgb = NAVY
 
     add_p(
-        "This is to certify that the project report entitled \"VASTUVISION AI: AUTONOMOUS ARCHITECTURAL SPACE PLANNING & "
+        "This is to certify that the project report entitled \"ARCHIE AI: AUTONOMOUS ARCHITECTURAL SPACE PLANNING & "
         "3D INTERIOR VISUALIZATION USING DUAL-AI ORCHESTRATION\" is a bona fide record of work carried out by the following candidate:",
         space_after=12
     )
@@ -321,7 +321,7 @@ def build_35_page_document():
     r_dec.font.color.rgb = NAVY
 
     add_p(
-        "I hereby declare that the capstone project work entitled \"VASTUVISION AI: AUTONOMOUS ARCHITECTURAL SPACE PLANNING & "
+        "I hereby declare that the capstone project work entitled \"ARCHIE AI: AUTONOMOUS ARCHITECTURAL SPACE PLANNING & "
         "3D INTERIOR VISUALIZATION USING DUAL-AI ORCHESTRATION\" submitted to Ramniranjan Jhunjhunwala College (Autonomous), affiliated with the "
         "University of Mumbai, is an authentic record of our original software engineering, algorithmic design, and data science research.",
         space_after=12
@@ -353,7 +353,7 @@ def build_35_page_document():
     r_ack.font.color.rgb = NAVY
 
     add_p(
-        "The conceptualization, engineering, and empirical validation of VastuVision AI has been a deeply rewarding academic journey. "
+        "The conceptualization, engineering, and empirical validation of Archie AI has been a deeply rewarding academic journey. "
         "I take immense pleasure in expressing our heartfelt gratitude to all individuals and institutional pillars who made the successful "
         "completion of this undergraduate research possible.",
         space_after=12
@@ -408,7 +408,7 @@ def build_35_page_document():
     )
 
     add_p(
-        "This project introduces VastuVision AI, an autonomous, full-stack spatial synthesis and 3D architectural visualization platform engineered "
+        "This project introduces Archie AI, an autonomous, full-stack spatial synthesis and 3D architectural visualization platform engineered "
         "around a novel Decoupled Dual-AI Orchestration Architecture. The platform bifurcates cognitive spatial planning from photorealistic visual synthesis: "
         "(1) Google Gemini (acting as the 'Architectural Brain') evaluates user-specified dimensions (50 to 5,000 sq. ft.), bedroom/toilet configurations, "
         "suburban location profiles, and cardinal orientations through strict in-context prompt calibration, generating mathematically valid, non-overlapping "
@@ -428,7 +428,7 @@ def build_35_page_document():
     add_p(
         "Empirical benchmarking across 100 diverse residential floor plan test cases demonstrates a 97.4% spatial non-overlap validity rate, a 94.8% Vastu "
         "cardinal compliance index, a mean end-to-end pipeline latency of 22.5 seconds, and a System Usability Scale (SUS) rating of 86.4/100. "
-        "VastuVision AI effectively democratizes professional, culturally auspicious architectural conceptualization, reducing design turnaround "
+        "Archie AI effectively democratizes professional, culturally auspicious architectural conceptualization, reducing design turnaround "
         "from several days to under 30 seconds at near-zero inference overhead.",
         bold_prefix="Empirical Findings & Contribution: ", space_after=12
     )
@@ -474,7 +474,7 @@ def build_35_page_document():
         ("2.3", "Computational Space Planning & Layout Optimization", "17"),
         ("2.4", "Generative AI in Architecture: LLMs & Latent Diffusion", "18"),
         ("2.5", "Comprehensive Literature Survey Matrix (12 Studies)", "19"),
-        ("2.6", "Identified Research Gaps & VastuVision AI Synthesis", "20"),
+        ("2.6", "Identified Research Gaps & Archie AI Synthesis", "20"),
         ("3", "SYSTEM REQUIREMENTS & TECHNOLOGY STACK", "21"),
         ("3.1", "Requirement Engineering Methodology", "21"),
         ("3.2", "Functional Requirements Specification (FR-1 to FR-10)", "21"),
@@ -535,7 +535,7 @@ def build_35_page_document():
         ("Table 4.1", "Vastu Purusha Mandala 8-Directional Spatial Allocation Matrix", "30"),
         ("Table 4.2", "MongoDB Collections and Document Schema Attribute Mapping", "31"),
         ("Table 4.3", "RESTful API Endpoints and HTTP Contract Specifications", "32"),
-        ("Table 5.1", "VastuVision AI Performance Benchmark Across 100 Residential Cases", "37"),
+        ("Table 5.1", "Archie AI Performance Benchmark Across 100 Residential Cases", "37"),
         ("Table 5.2", "Pipeline Latency Breakdown Across Discrete Operational Stages", "38"),
         ("Table 5.3", "System Usability Scale (SUS) Survey Response Breakdown", "39"),
         ("Table 6.1", "Comparative Evaluation Across AI Models for Spatial Planning", "40"),
@@ -556,14 +556,14 @@ def build_35_page_document():
     r_lof.font.color.rgb = NAVY
 
     lof_items = [
-        ("Figure 4.1", "VastuVision AI Four-Tier Decoupled System Architecture Diagram", "27"),
+        ("Figure 4.1", "Archie AI Four-Tier Decoupled System Architecture Diagram", "27"),
         ("Figure 4.2", "Dual-AI Operational Pipeline Flowchart (Gemini to Stability AI)", "28"),
         ("Figure 4.3", "Vastu Purusha Mandala 3x3 Cartesian Energy Grid Schematic", "30"),
         ("Figure 4.4", "Interactive 2D Architectural Floor Plan Schematic (SVG Engine)", "33"),
         ("Figure 4.5", "Dynamic 6-View Architectural Perspective Presentation Grid", "34"),
         ("Figure 5.1", "Spatial Validity and Vastu Compliance Distributions Across Typologies", "37"),
         ("Figure 5.2", "End-to-End Pipeline Latency Distribution Across Execution Stages", "38"),
-        ("Figure 6.1", "Accuracy Comparison Between Monolithic LLMs and VastuVision AI", "41"),
+        ("Figure 6.1", "Accuracy Comparison Between Monolithic LLMs and Archie AI", "41"),
     ]
     t_lof = doc.add_table(rows=len(lof_items) + 1, cols=3)
     style_table(t_lof, [Inches(1.2), Inches(4.3), Inches(1.0)], ["Figure No.", "Figure Caption / Title", "Page No."], lof_items, center_cols=[0, 2])
@@ -624,7 +624,7 @@ def build_35_page_document():
 
     add_sec_h("1.3", "Motivation for the Project")
     add_p(
-        "The motivation driving the development of VastuVision AI stems from the convergence of three pressing realities in modern software and architectural engineering:",
+        "The motivation driving the development of Archie AI stems from the convergence of three pressing realities in modern software and architectural engineering:",
         bold_prefix="Core Drivers of Investigation: "
     )
     add_bullet("The prohibitive financial cost and multi-week turnaround times associated with professional architectural drafting services, effectively pricing out lower- and middle-income families from accessing tailored design intelligence.", "1. Economic Democratization: ")
@@ -646,7 +646,7 @@ def build_35_page_document():
     add_bullet("How can a decoupled generative pipeline synchronize textual spatial reasoning with latent image diffusion models to generate coherent, room-adaptive 6-view 3D interior visualization boards?", "RQ 3 (Multi-Modal Synchronization): ")
 
     add_sec_h("1.5", "Aims and Specific Technical Objectives")
-    add_p("The overarching aim of this project is to develop, evaluate, and deploy VastuVision AI—a full-stack intelligent residential layout and visualization web application.", bold_prefix="Primary Project Aim: ")
+    add_p("The overarching aim of this project is to develop, evaluate, and deploy Archie AI—a full-stack intelligent residential layout and visualization web application.", bold_prefix="Primary Project Aim: ")
     add_p("To achieve this aim, the following specific technical objectives were formulated and executed:")
     add_bullet("Design and implement an intuitive, responsive React 19 single-page application (SPA) supporting dynamic bedroom/toilet counters, location autocomplete, and live aesthetic style selection.", "Objective 1 (User Experience): ")
     add_bullet("Formulate an 8-directional mathematical Vastu Purusha Mandala computational engine mapping room functions to elemental zones (Ishan, Agneya, Nairutya, Vayavya, Brahmasthan).", "Objective 2 (Vastu Engine): ")
@@ -658,12 +658,12 @@ def build_35_page_document():
 
     add_sec_h("1.6", "Scope & Delimitations of the Study")
     add_p(
-        "The scope of VastuVision AI encompasses early-stage conceptual residential layout design, space allocation, interior zoning, and photorealistic "
+        "The scope of Archie AI encompasses early-stage conceptual residential layout design, space allocation, interior zoning, and photorealistic "
         "aesthetic presentation for apartments, penthouses, duplexes, and independent bungalows in India. The software supports input sizes from 50 to 5,000 sq. ft.",
         bold_prefix="Operational Scope: "
     )
     add_p(
-        "Delimitations: VastuVision AI is engineered specifically as a conceptual architectural planning and interior visualization platform. It does NOT "
+        "Delimitations: Archie AI is engineered specifically as a conceptual architectural planning and interior visualization platform. It does NOT "
         "perform structural civil engineering calculations (such as concrete beam bending moments, reinforcement bar schedules, soil-bearing capacity, "
         "or finite-element seismic shear wall analysis under IS 1893). All AI-generated blueprints are intended for spatial conceptualization and must be "
         "reviewed by a licensed civil engineer prior to municipal sanction.",
@@ -683,7 +683,7 @@ def build_35_page_document():
 
     add_sec_h("1.9", "Relevance to Modern Urban Architecture & Societal Impact")
     add_p(
-        "By fusing ancient Vedic environmental planning canons with cutting-edge generative AI, VastuVision AI democratizes architectural design. "
+        "By fusing ancient Vedic environmental planning canons with cutting-edge generative AI, Archie AI democratizes architectural design. "
         "It empowers aspiring homeowners, students, and small civil contractors to visualize auspicious, functional, and beautiful living spaces in under "
         "30 seconds, reducing design turnaround by over 99% and fostering sustainable, daylight-optimized living environments across urban India."
     )
@@ -775,11 +775,11 @@ def build_35_page_document():
     )
 
     add_sec_h("2.5", "Comprehensive Literature Survey Matrix")
-    add_p("Table 2.1 summarizes twelve foundational academic research publications and industry benchmarks directly informing the architecture of VastuVision AI:")
+    add_p("Table 2.1 summarizes twelve foundational academic research publications and industry benchmarks directly informing the architecture of Archie AI:")
 
     t_lit = doc.add_table(rows=13, cols=4)
     w_lit = [Inches(0.6), Inches(1.8), Inches(1.8), Inches(2.3)]
-    h_lit = ["Sr.", "Author(s) & Year", "Paper / Source Title", "Relevance & Direct Contribution to VastuVision AI"]
+    h_lit = ["Sr.", "Author(s) & Year", "Paper / Source Title", "Relevance & Direct Contribution to Archie AI"]
     d_lit = [
         ("1", "Puri, B.B. (2018)", "Applied Vastu Shastra in Residential Design", "Formalized the 8-directional elemental matrix and deity attributes utilized in our Vastu reasoning engine."),
         ("2", "Vaswani et al. (2017)", "Attention Is All You Need (NeurIPS)", "Established the multi-head self-attention transformer foundations powering Google Gemini 3.5."),
@@ -796,7 +796,7 @@ def build_35_page_document():
     ]
     style_table(t_lit, w_lit, h_lit, d_lit, center_cols=[0])
 
-    add_sec_h("2.6", "Identified Research Gaps & VastuVision AI Synthesis")
+    add_sec_h("2.6", "Identified Research Gaps & Archie AI Synthesis")
     add_p(
         "A rigorous synthesis of the surveyed literature reveals four fundamental research gaps in the existing body of architectural informatics:",
         bold_prefix="Identified Deficiencies: "
@@ -806,10 +806,10 @@ def build_35_page_document():
     add_bullet("Monolithic Model Hallucination: Deploying a single monolithic LLM for both architectural layout and visual drafting results in dimensional contradictions and severe spatial overlap errors.", "Research Gap 3: ")
     add_bullet("Brittle Production Pipelines: Existing academic research prototypes crash completely when backend databases or external cloud APIs experience transient timeouts.", "Research Gap 4: ")
     add_p(
-        "VastuVision AI directly resolves these gaps through a Decoupled Dual-AI Orchestration paradigm: Google Gemini acts as the architectural brain "
+        "Archie AI directly resolves these gaps through a Decoupled Dual-AI Orchestration paradigm: Google Gemini acts as the architectural brain "
         "governed by in-context Vastu constraints and deterministic geometric validators, while Stability AI SDXL acts as the visual artist, backed by an "
         "in-memory failover cache and dynamic SVG blueprint synthesis.",
-        bold_prefix="The VastuVision AI Solution: "
+        bold_prefix="The Archie AI Solution: "
     )
 
     doc.add_page_break()
@@ -821,7 +821,7 @@ def build_35_page_document():
 
     add_sec_h("3.1", "Requirement Engineering Methodology")
     add_p(
-        "The requirements for VastuVision AI were engineered through user-centered agile workflows, domain expert interviews with practicing civil contractors "
+        "The requirements for Archie AI were engineered through user-centered agile workflows, domain expert interviews with practicing civil contractors "
         "and interior designers in Navi Mumbai, and empirical analysis of typical Mumbai residential floor plan layouts. Specifications were systematically "
         "categorized into Functional Requirements (FRs), Non-Functional Requirements (NFRs), Hardware Specifications, and Software Architecture Matrices."
     )
@@ -864,11 +864,11 @@ def build_35_page_document():
     style_table(t_hw, w_hw, h_hw, d_hw, center_cols=[0])
 
     add_sec_h("3.5", "Software & Technology Stack Architectural Matrix")
-    add_p("Table 3.2 details the complete software technology stack selected for VastuVision AI, outlining the version and architectural role of each component:")
+    add_p("Table 3.2 details the complete software technology stack selected for Archie AI, outlining the version and architectural role of each component:")
 
     t_stk = doc.add_table(rows=12, cols=4)
     w_stk = [Inches(1.4), Inches(1.5), Inches(0.9), Inches(2.7)]
-    h_stk = ["Architecture Layer", "Technology", "Version", "Specific Role in VastuVision AI"]
+    h_stk = ["Architecture Layer", "Technology", "Version", "Specific Role in Archie AI"]
     d_stk = [
         ("Client Framework", "React.js", "19.x", "Component-driven single page application frontend with declarative state management"),
         ("Build & Bundler", "Vite", "8.x", "Sub-second Hot Module Replacement (HMR) and optimized production asset bundling"),
@@ -886,7 +886,7 @@ def build_35_page_document():
 
     add_sec_h("3.6", "Security, Privacy & Data Governance Architecture")
     add_p(
-        "Residential design platforms handle potentially sensitive personal spatial data. VastuVision AI implements defense-in-depth security:",
+        "Residential design platforms handle potentially sensitive personal spatial data. Archie AI implements defense-in-depth security:",
         bold_prefix="Security & Governance Safeguards: "
     )
     add_bullet("User-uploaded room photographs are processed via Multer into a local staging directory with randomized UUID filenames, disallowing execution permissions to prevent remote code execution (RCE).", "1. Upload Sanitization: ")
@@ -903,7 +903,7 @@ def build_35_page_document():
 
     add_sec_h("4.1", "Four-Tier Decoupled System Architecture")
     add_p(
-        "VastuVision AI is engineered around a four-tier decoupled architecture: (1) Client Presentation Layer, (2) API Gateway & Controller Layer, "
+        "Archie AI is engineered around a four-tier decoupled architecture: (1) Client Presentation Layer, (2) API Gateway & Controller Layer, "
         "(3) Dual-AI Orchestration Engine Layer, and (4) Hybrid Persistence Layer. Figure 4.1 illustrates the structural components and communication channels:"
     )
 
@@ -958,9 +958,9 @@ def build_35_page_document():
 
     add_sec_h("4.3", "The Dual-AI Decoupled Orchestration Engine")
     add_p(
-        "A primary technological innovation in VastuVision AI is the strict cognitive decoupling of logical reasoning from visual diffusion. "
+        "A primary technological innovation in Archie AI is the strict cognitive decoupling of logical reasoning from visual diffusion. "
         "Standard multi-modal attempts force a single model to handle both tasks, resulting in severe spatial hallucinations or poor image quality. "
-        "VastuVision AI specializes each task according to model strengths:",
+        "Archie AI specializes each task according to model strengths:",
         bold_prefix="Specialization of Cognitive Roles: "
     )
     add_bullet(
@@ -1077,7 +1077,7 @@ def build_35_page_document():
     add_p(
         "In modern Data Science, foundation models (LLMs and Latent Diffusion models) are evaluated using In-Context Prompt Calibration, "
         "Heuristic Constraint Verification, and Benchmark Satisfaction Rates rather than retraining model weights from scratch. "
-        "VastuVision AI was evaluated across 100 residential test cases spanning studio apartments (100 sq. ft.) to large flats (1,500 sq. ft.)."
+        "Archie AI was evaluated across 100 residential test cases spanning studio apartments (100 sq. ft.) to large flats (1,500 sq. ft.)."
     )
 
     add_sec_h("5.2", "Mathematical Formulation of Evaluation Metrics")
@@ -1137,7 +1137,7 @@ def build_35_page_document():
     add_p(
         "A formal usability evaluation was conducted using the standardized System Usability Scale (SUS) developed by John Brooke (1996). "
         "A cohort of 25 participants (20 undergraduate students in computer science/civil engineering and 5 practicing civil contractors) "
-        "interacted with VastuVision AI across three tasks: (1) submitting a 2BHK design request, (2) evaluating the 2D SVG blueprint layer toggles, "
+        "interacted with Archie AI across three tasks: (1) submitting a 2BHK design request, (2) evaluating the 2D SVG blueprint layer toggles, "
         "and (3) reviewing the 6-view visual perspective board. Table 5.3 summarizes the evaluation results:"
     )
 
@@ -1166,7 +1166,7 @@ def build_35_page_document():
 
     t_cmp = doc.add_table(rows=6, cols=5)
     w_cmp = [Inches(1.8), Inches(1.1), Inches(1.1), Inches(1.1), Inches(1.4)]
-    h_cmp = ["Evaluation Metric", "Zero-Shot GPT-3.5", "Claude 3 Sonnet", "Raw Gemini", "VastuVision AI"]
+    h_cmp = ["Evaluation Metric", "Zero-Shot GPT-3.5", "Claude 3 Sonnet", "Raw Gemini", "Archie AI"]
     d_cmp = [
         ("Vastu Compliance Rate", "52.0%", "58.5%", "74.0%", "94.8%"),
         ("Spatial Non-Overlap Rate", "68.0%", "75.0%", "84.0%", "97.4%"),
@@ -1194,7 +1194,7 @@ def build_35_page_document():
     add_p(
         "A critical dimension in modern Data Science is sustainable AI engineering and economic viability. "
         "Training foundation models from scratch produces significant carbon emissions (estimated at 200+ tons of CO2 equivalent for a 7B LLM). "
-        "By leveraging pre-trained foundation models through calibrated API calls, VastuVision AI reduces operational carbon footprint by over 99.9%. "
+        "By leveraging pre-trained foundation models through calibrated API calls, Archie AI reduces operational carbon footprint by over 99.9%. "
         "Table 6.3 details the economic cost comparison per 1,000 architectural layout generations:"
     )
 
@@ -1205,7 +1205,7 @@ def build_35_page_document():
         ("Licensed Architect / Studio", "₹5,00,000 - ₹25,00,000", "3 - 6 Months", "Full Office Drafting Team"),
         ("Commercial CAD (Revit/3ds Max)", "₹3,50,000 (License Fees)", "2 - 4 Weeks", "High-End Workstations"),
         ("Self-Hosted GPU Cluster", "$450 / Month (~₹37,000)", "30 Seconds", "NVIDIA A100 / RTX 4090s"),
-        ("VastuVision AI (Dual-AI Cloud)", "$2.00 (~₹165 Total)", "22.5 Seconds", "Standard Web Server / Browser")
+        ("Archie AI (Dual-AI Cloud)", "$2.00 (~₹165 Total)", "22.5 Seconds", "Standard Web Server / Browser")
     ]
     style_table(t_cost, w_cost, h_cost, d_cost, center_cols=[1, 2])
 
@@ -1218,13 +1218,13 @@ def build_35_page_document():
 
     add_sec_h("7.1", "Summary of Research Contributions")
     add_p(
-        "VastuVision AI successfully demonstrates the convergence of modern Artificial Intelligence, full-stack software engineering, "
+        "Archie AI successfully demonstrates the convergence of modern Artificial Intelligence, full-stack software engineering, "
         "and traditional Indian architectural science. By coupling Google Gemini's reasoning capabilities with Stability AI's visual synthesis, "
         "the application democratizes accessible, instant, and culturally attuned home design for homeowners, students, and civil contractors."
     )
 
     add_sec_h("7.2", "System Limitations & Constraints")
-    add_bullet("VastuVision AI creates conceptual space plans and architectural interior renderings. It does not certify structural engineering safety, seismic resistance (IS 1893), or concrete beam sizing.", "1. Conceptual Scope: ")
+    add_bullet("Archie AI creates conceptual space plans and architectural interior renderings. It does not certify structural engineering safety, seismic resistance (IS 1893), or concrete beam sizing.", "1. Conceptual Scope: ")
     add_bullet("In the event of total network loss, the visualizer uses curated room-specific photography rather than generating new synthetic AI renders.", "2. Offline Mode Visual Granularity: ")
     add_bullet("The current system assumes orthogonal (rectangular/square) plot boundaries; non-orthogonal, irregular trapezoidal land parcels require manual coordinate pre-processing.", "3. Plot Geometry Constraints: ")
 
@@ -1269,7 +1269,7 @@ def build_35_page_document():
 
     viva_qa = [
         ("Q1: Explain your project in 30 seconds.",
-         "Answer: VastuVision AI is an AI-powered residential planning platform. A user inputs their apartment area, location, and requirements. Our system uses a Dual-AI architecture: Google Gemini acts as the architectural brain to compute Vastu-compliant room dimensions and furniture placement, while Stability AI acts as the artist to render photorealistic 6-view 3D visualizations alongside an interactive 2D floor plan."),
+         "Answer: Archie AI is an AI-powered residential planning platform. A user inputs their apartment area, location, and requirements. Our system uses a Dual-AI architecture: Google Gemini acts as the architectural brain to compute Vastu-compliant room dimensions and furniture placement, while Stability AI acts as the artist to render photorealistic 6-view 3D visualizations alongside an interactive 2D floor plan."),
 
         ("Q2: Did you train your own AI model from scratch?",
          "Answer: No. Foundational models like Google Gemini and Stability AI SDXL are already pre-trained on billions of parameters. For our Data Science project, we implemented In-Context Prompt Engineering, Temperature Calibration, and a Dual-Model Orchestration Pipeline. Training an LLM from scratch for residential layout is computationally unnecessary and redundant."),
@@ -1308,7 +1308,7 @@ def build_35_page_document():
          "Answer: Uploaded images are processed through Multer and stored locally in sanitized storage directories. They are only analyzed for room context and are never exposed publicly."),
 
         ("Q14: What design styles does your system support?",
-         "Answer: VastuVision AI supports five distinct aesthetics: Modern Indian, Traditional Indian, Contemporary, Minimalist, and Fusion, each applying distinct color palettes, materials (e.g. teak, marble), and lighting temperatures."),
+         "Answer: Archie AI supports five distinct aesthetics: Modern Indian, Traditional Indian, Contemporary, Minimalist, and Fusion, each applying distinct color palettes, materials (e.g. teak, marble), and lighting temperatures."),
 
         ("Q15: What is the biggest technical challenge you solved?",
          "Answer: Bridging probabilistic natural language outputs from Gemini into deterministic, mathematically valid JSON schemas that can directly render 2D SVG vector blueprints and trigger photorealistic Stability AI image prompts."),
@@ -1334,8 +1334,8 @@ def build_35_page_document():
         add_p(a, space_after=8)
 
     # Save to desktop and project docs folder
-    desktop_docx = "c:\\Users\\DELL\\Desktop\\PROJECT_REPORT_VASTUVISION_AI.docx"
-    docs_docx = "c:\\Users\\DELL\\Desktop\\VastuVision-AI\\docs\\PROJECT_REPORT_VASTUVISION_AI.docx"
+    desktop_docx = "c:\\Users\\DELL\\Desktop\\PROJECT_REPORT_ARCHIE_AI.docx"
+    docs_docx = "c:\\Users\\DELL\\Desktop\\VastuVision-AI\\docs\\PROJECT_REPORT_ARCHIE_AI.docx"
 
     doc.save(desktop_docx)
     doc.save(docs_docx)

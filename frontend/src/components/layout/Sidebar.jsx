@@ -8,8 +8,8 @@ const Logo = () => (
       <span className="text-lg">🏠</span>
     </div>
     <div>
-      <h1 className="font-heading font-bold text-base text-white leading-none">VastuVision</h1>
-      <p className="text-[10px] text-saffron-400 font-medium tracking-wider uppercase">AI</p>
+      <h1 className="font-heading font-bold text-base text-white leading-none">Archie AI</h1>
+      <p className="text-[10px] text-saffron-400 font-medium tracking-wider uppercase">Architectural AI</p>
     </div>
   </div>
 )

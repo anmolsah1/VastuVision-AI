@@ -86,7 +86,7 @@ const callOpenAI = async (prompt) => {
         {
           role: 'system',
           content:
-            'You are VastuVision AI, an expert in Indian Vastu Shastra principles and modern interior design for residential spaces in Mumbai and Navi Mumbai. Always respond with valid JSON when requested.',
+            'You are Archie AI, an expert in architectural space planning, Indian Vastu Shastra principles, and modern interior design for residential spaces. Always respond with valid JSON when requested.',
         },
         { role: 'user', content: prompt },
       ],

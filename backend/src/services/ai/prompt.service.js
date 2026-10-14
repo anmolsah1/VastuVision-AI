@@ -47,7 +47,7 @@ const buildDesignPrompt = (params) => {
   const roomTypeDisplay = roomType.replace(/_/g, ' ');
   const hasImages = uploadedImages.length > 0;
 
-  return `You are VastuVision AI — a specialized AI assistant trained in Indian Vastu Shastra principles and modern interior design for residential spaces in Mumbai and Navi Mumbai, India.
+  return `You are Archie AI — a specialized AI assistant trained in Indian architectural space planning, Vastu Shastra principles, and modern interior design for residential spaces in Mumbai and Navi Mumbai, India.
 
 ## YOUR ROLE
 You will analyze a room design request and produce a comprehensive, structured design plan. You MUST:
@@ -242,7 +242,7 @@ const buildRefinementPrompt = (params) => {
     .map((h) => `${h.role === 'user' ? 'User' : 'AI'}: ${h.content}`)
     .join('\n');
 
-  return `You are VastuVision AI. The user wants to refine an existing room design.
+  return `You are Archie AI. The user wants to refine an existing room design.
 
 ## EXISTING DESIGN CONTEXT
 ${JSON.stringify(existingDesign, null, 2)}

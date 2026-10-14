@@ -1,7 +1,7 @@
 {
-  "name": "vastuvision-backend",
+  "name": "archie-ai-backend",
   "version": "1.0.0",
-  "description": "VastuVision AI - Backend API Server",
+  "description": "Archie AI - Backend API Server",
   "main": "src/server.js",
   "type": "commonjs",
   "scripts": {

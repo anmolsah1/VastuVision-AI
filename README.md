@@ -1,6 +1,6 @@
-# 🏠 VastuVision AI
+# 🏠 Archie AI
 
-> **AI-Powered Indian Interior Design & Vastu Planning Assistant**  
+> **AI-Powered Architectural Space Planning & Vastu Design Assistant**  
 > A full-stack MERN college project integrating traditional Vastu Shastra principles with modern AI-generated room visualization.
 
 ---
@@ -25,7 +25,7 @@
 
 ## 🎯 Project Overview
 
-VastuVision AI is a full-stack web application that generates AI-powered interior design concepts for residential spaces in Mumbai and Navi Mumbai, India.
+Archie AI is a full-stack web application that generates AI-powered architectural and interior design concepts for residential spaces in Mumbai and Navi Mumbai, India.
 
 The system accepts user inputs (location, room size, requirements, photos), runs them through an AI reasoning pipeline that applies traditional **Vastu Shastra** principles alongside modern **architectural design** best practices, and generates a **6-view composite room visualization** image.
 
@@ -434,4 +434,4 @@ This is a college final-year project demonstrating:
 
 ---
 
-*Built with ❤️ as a college AI project — VastuVision AI*
+*Built with ❤️ as a college AI project — Archie AI*

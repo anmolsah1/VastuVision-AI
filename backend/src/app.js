@@ -97,7 +97,7 @@ app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 app.get('/api/health', (req, res) => {
   res.json({
     success: true,
-    status: 'VastuVision AI API is running',
+    status: 'Archie AI API is running',
     mockMode: config.ai.mockMode,
     environment: config.nodeEnv,
     timestamp: new Date().toISOString(),
