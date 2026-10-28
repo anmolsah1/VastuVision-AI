@@ -72,6 +72,38 @@ export const DesignResult = ({
   const [showShareMenu, setShowShareMenu] = useState(false)
   const [copiedNotification, setCopiedNotification] = useState(false)
 
+  // Sequential image loading — 55s delay between each to respect Pollinations rate limit
+  const DELAY_BETWEEN_IMAGES_MS = 55000 // 55 seconds
+  const [unlockedCount, setUnlockedCount] = useState(1)   // first image loads immediately
+  const [countdowns, setCountdowns] = useState(() =>
+    displayViews.map((_, i) => (i === 0 ? 0 : i * DELAY_BETWEEN_IMAGES_MS / 1000))
+  )
+
+  // Unlock images one by one
+  useEffect(() => {
+    if (unlockedCount >= displayViews.length) return
+    const timer = setTimeout(() => {
+      setUnlockedCount((prev) => prev + 1)
+    }, DELAY_BETWEEN_IMAGES_MS)
+    return () => clearTimeout(timer)
+  }, [unlockedCount, displayViews.length])
+
+  // Live countdown tick for each pending image
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCountdowns((prev) =>
+        prev.map((cd, i) => (i < unlockedCount ? 0 : Math.max(0, cd - 1)))
+      )
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [unlockedCount])
+
+  // Reset when views change
+  useEffect(() => {
+    setUnlockedCount(1)
+    setCountdowns(displayViews.map((_, i) => (i === 0 ? 0 : i * DELAY_BETWEEN_IMAGES_MS / 1000)))
+  }, [displayViews])
+
   // Keyboard navigation for Lightbox
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -189,38 +221,82 @@ export const DesignResult = ({
           {activeViewMode === 'grid' ? (
             /* 3-Column x 2-Row Grid matching user's demo format */
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-2.5 rounded-xl overflow-hidden bg-black/40 p-1">
-              {displayViews.map((view, idx) => (
-                <div
-                  key={view.id || idx}
-                  onClick={() => setSelectedViewIndex(idx)}
-                  className="group relative aspect-[4/3] rounded-lg overflow-hidden bg-charcoal-900 cursor-pointer border border-white/5 hover:border-saffron-500/50 transition-all duration-300 shadow-md hover:shadow-saffron-500/10"
-                >
-                  {/* Top-Left View Badge */}
-                  <div className="absolute top-2.5 left-2.5 z-10 px-2.5 py-1 rounded-md bg-black/75 backdrop-blur-md border border-white/10 text-white text-[11px] sm:text-xs font-medium shadow-md flex items-center gap-1.5 pointer-events-none">
-                    <span>{view.label}</span>
-                  </div>
+              {displayViews.map((view, idx) => {
+                const isUnlocked = idx < unlockedCount
+                const cd = countdowns[idx] || 0
+                const mins = Math.floor(cd / 60)
+                const secs = cd % 60
+                return (
+                  <div
+                    key={view.id || idx}
+                    onClick={() => isUnlocked && setSelectedViewIndex(idx)}
+                    className={`group relative aspect-[4/3] rounded-lg overflow-hidden bg-charcoal-900 border transition-all duration-300 shadow-md ${
+                      isUnlocked
+                        ? 'cursor-pointer border-white/5 hover:border-saffron-500/50 hover:shadow-saffron-500/10'
+                        : 'cursor-default border-white/5'
+                    }`}
+                  >
+                    {/* Top-Left View Badge */}
+                    <div className="absolute top-2.5 left-2.5 z-10 px-2.5 py-1 rounded-md bg-black/75 backdrop-blur-md border border-white/10 text-white text-[11px] sm:text-xs font-medium shadow-md flex items-center gap-1.5 pointer-events-none">
+                      <span>{view.label}</span>
+                    </div>
 
-                  {/* Image */}
-                  <img
-                    src={view.url}
-                    alt={view.label}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                    onError={(e) => {
-                      if (view.fallbackUrl && e.currentTarget.src !== view.fallbackUrl) {
-                        e.currentTarget.src = view.fallbackUrl
-                      }
-                    }}
-                  />
-
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
-                    <p className="text-white text-[11px] font-medium drop-shadow truncate">
-                      🔍 Click to enlarge & inspect
-                    </p>
+                    {isUnlocked ? (
+                      <>
+                        {/* Actual Image */}
+                        <img
+                          src={view.url}
+                          alt={view.label}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                          loading="lazy"
+                          onError={(e) => {
+                            if (view.fallbackUrl && e.currentTarget.src !== view.fallbackUrl) {
+                              e.currentTarget.src = view.fallbackUrl
+                            }
+                          }}
+                        />
+                        {/* Hover Overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                          <p className="text-white text-[11px] font-medium drop-shadow truncate">
+                            🔍 Click to enlarge & inspect
+                          </p>
+                        </div>
+                      </>
+                    ) : (
+                      /* Loading / Countdown State */
+                      <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-charcoal-950/90 backdrop-blur-sm">
+                        {/* Animated spinner ring */}
+                        <div className="relative w-14 h-14">
+                          <div className="absolute inset-0 rounded-full border-4 border-white/10" />
+                          <div
+                            className="absolute inset-0 rounded-full border-4 border-transparent border-t-saffron-400"
+                            style={{ animation: 'spin 1.2s linear infinite' }}
+                          />
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <span className="text-lg">🎨</span>
+                          </div>
+                        </div>
+                        <div className="text-center px-3">
+                          <p className="text-white/80 text-xs font-semibold">AI Generating…</p>
+                          <p className="text-saffron-400 text-lg font-bold tabular-nums mt-1">
+                            {mins > 0 ? `${mins}m ` : ''}{String(secs).padStart(2, '0')}s
+                          </p>
+                          <p className="text-white/30 text-[10px] mt-0.5">Rate limit: 1 image / 55s</p>
+                        </div>
+                        {/* Progress bar */}
+                        <div className="w-24 h-1 rounded-full bg-white/10 overflow-hidden">
+                          <div
+                            className="h-full bg-saffron-400 rounded-full transition-all duration-1000"
+                            style={{
+                              width: `${Math.max(0, 100 - (cd / (idx * DELAY_BETWEEN_IMAGES_MS / 1000)) * 100)}%`
+                            }}
+                          />
+                        </div>
+                      </div>
+                    )}
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           ) : (
             /* Composite Sheet View */
